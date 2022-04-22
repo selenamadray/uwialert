@@ -4,7 +4,7 @@ from flask_login import LoginManager, current_user
 from flask_uploads import DOCUMENTS, IMAGES, TEXT, UploadSet, configure_uploads
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
-from werkzeug.datastructures import  FileStorage
+from werkzeug.datastructures import FileStorage
 from datetime import timedelta
 
 
@@ -24,6 +24,7 @@ views = [
     api_views
 ]
 
+
 def add_views(app, views):
     for view in views:
         app.register_blueprint(view)
@@ -34,13 +35,16 @@ def loadConfig(app, config):
     if app.config['ENV'] == "DEVELOPMENT":
         app.config.from_object('App.config')
     else:
-        app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('SQLALCHEMY_DATABASE_URI')
+        app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get(
+            'SQLALCHEMY_DATABASE_URI')
         app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
-        app.config['JWT_EXPIRATION_DELTA'] =  timedelta(days=int(os.environ.get('JWT_EXPIRATION_DELTA')))
+        app.config['JWT_EXPIRATION_DELTA'] = timedelta(
+            days=int(os.environ.get('JWT_EXPIRATION_DELTA')))
         app.config['DEBUG'] = os.environ.get('ENV').upper() != 'PRODUCTION'
         app.config['ENV'] = os.environ.get('ENV')
     for key, value in config.items():
         app.config[key] = config[key]
+
 
 def create_app(config={}):
     app = Flask(__name__, static_url_path='/static')
@@ -57,6 +61,7 @@ def create_app(config={}):
     setup_jwt(app)
     app.app_context().push()
     return app
+
 
 app = create_app()
 migrate = get_migrate(app)

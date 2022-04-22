@@ -4,7 +4,7 @@ from flask.cli import with_appcontext, AppGroup
 
 from App.database import create_db
 from App.main import app, migrate
-from App.controllers import ( create_user, get_all_users_json, get_all_users )
+from App.controllers import ( create_user, get_all_users_json, get_all_users, make_report, get_all_reports)
 
 # This commands file allow you to create convenient CLI commands
 # for testing controllers
@@ -46,12 +46,31 @@ def list_user_command(format):
 app.cli.add_command(user_cli) # add the group to the cli
 
 
+
+
 '''
 Generic Commands
 '''
-
 
 @app.cli.command("init")
 def initialize():
     create_db(app)
     print('database intialized')
+
+@app.cli.command("add-report")
+@click.argument("type", default="hazard")
+@click.argument("location", default="St Austine")
+@click.argument("time", default="two")
+@click.argument("name", default="rob")
+@click.argument("date", default="may")
+@click.argument("phonenum", default="none")
+def create_report(type, location, time, name, date, phonenum):
+    make_report(type, location, time, name, date, phonenum)
+    print('Report Made')
+
+@app.cli.command("list-report", help="Lists reports in the database")
+@click.argument("format", default="string")
+def list_user_command(format):
+    if format == 'string':
+        print(get_all_reports())
+

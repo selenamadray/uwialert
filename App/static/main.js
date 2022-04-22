@@ -1,4 +1,6 @@
 
+const server = "https://uwi-alert-default-rtdb.firebaseio.com/"
+
 async function getUserData(){
     const response = await fetch('/api/users');
     return response.json();
@@ -18,5 +20,7 @@ async function main(){
     const users = await getUserData();
     loadTable(users);
 }
+
+
 
 main();

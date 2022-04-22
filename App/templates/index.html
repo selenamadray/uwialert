@@ -1,10 +1,182 @@
 {% extends "layout.html" %}
-{% block title %}Flask MVC App{% endblock %}
-{% block page %}Flask MVC App{% endblock %}
+{% block title %}UWI Alert{% endblock %} 
+{% block page %}UWI Alert{% endblock %} 
 
 {{ super() }}
 
 {% block content %}
-    <h1>Flask MVC</h1>
-    <p>This is a boileplate flask application which follows the MVC pattern for structuring the project.</p>
+    <style>
+    body {
+        background-image: url('https://media.giphy.com/media/MyWrJJIdAfoJuEPlLP/giphy.gif');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+}
+    h2  {
+        color: white;
+        text-align: center;
+        font-family: "Libre Baskerville";
+    }
+    h3{
+        color: white;
+        text-align: center;
+        font-family: "Papyrus";
+    }
+    p {
+        color: white;
+        text-align: center;
+        font-family: "Libre Baskerville";
+        font-size: 20px;
+    }
+    .contacts{
+        color: white;
+        font-family: "Libre Baskerville";
+        font-size: 30px;
+    }
+
+    li{
+        color: white;
+        text-align: center;
+        font-family: "Libre Baskerville";
+        font-size: 20px;
+    }
+
+    hr{
+        color: white;
+    }
+
+    footer{
+        background-color: white;
+        color: #00cccc;
+        text-align: center;
+    }
+   
+    </style>
+    <h2> Welcome Student <h2>
+    <h3>Stay Alert - Don't Get Hurt!</h3> 
+    <p>This is your home page. Here you'll find updates on suspicious activities that occur on campus.</p> 
+    <p>This is your current location: </p> 
+<hr>
+
+
+<section>
+    <div class="Categories">
+    <a target="Categories" >
+    </a>
+    <h3> <div class="desc"> ABOUT </div> </h3>
+    </section>
+
+
+
+<div class="column">
+      <div class="imagecontainer"> 
+     <div class="gallery">
+     <a target="Report" >
+    <img src="https://media.istockphoto.com/vectors/hands-on-a-laptop-keyboard-the-concept-of-working-at-a-laptop-top-vector-id1240035453?k=20&m=1240035453&s=612x612&w=0&h=TJBLjX9iLcRNyGiouHc1XEhn4e99RoDyTG0FyoXmaE8=" width="100" height="100">
+     </a>
+     <section1>
+     <details>
+     <summary> <div class="desc1"> Make a report </div> </summary>
+             <ul>
+                  <li> This feature is intended to allow students to update the site with any incidents that may have taken place in campus by making a report.  </li>
+                  
+    </ul>
+    </details>
+    </section1>
+    </div>
+</div>
+</div>
+
+<div class="column">
+    <div class="gallery">
+    <a target="Geolocation" >
+    <img src="https://img.favpng.com/7/17/1/vector-graphics-royalty-free-location-map-image-png-favpng-nScWKfWi7QE239f6r4TKLT2gS.jpg" width="100" height="100" >
+    </a>
+    <section2>
+    <details>
+    <summary><div class="desc2"> Geolocation </div></summary>
+    <ul>
+            <li> Info about geolocation </li>
+             
+     </ul>
+     </details>
+     </section2>
+    </div>
+</div>
+
+
+    
+<div class="column">
+    <div class="gallery">
+    <a target="Notification" >
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLy0TASkvAQ31gDhBfQVtZ2SV92Pv7QGxdJA&usqp=CAUC" width="100" height="100" >
+    </a>
+    <section3>
+    <details>
+    <summary> <div class="desc3"> Get Alerts </div></summary>
+    <ul>
+        <li> Info about Alerts </li>
+                    
+    </ul>
+    </details>
+    </section3>
+    </div>
+</div>
+    
+
+    <section4>
+     <details>
+       <summary>
+            <a target="FAQs" >
+          <div class="desc5">  <img src="https://simg.nicepng.com/png/small/839-8396091_quick-answers-for-frequently-asked-questions-graphic-design.png" width="320" height="179"> </div>
+            </a>
+            <div class="desc4"> Frequently asked questions </div></summary>
+
+        <div class="desc6">
+        <ul> Question 1: How does one make a report using this website?
+        <li> The user can navigate to the top left hand side of the website and click on the button named Make a Report". After being redirected, the user can click on the box and type. When finished, press submit and you are done.</li>                   
+        <li> __________________________________________________________________________________________________________________</li>
+        </ul>
+
+        <ul> Question 2:
+        <li> Answer 2</li>   
+        <li> __________________________________________________________________________________________________________________</li>                
+        </ul>
+
+        <ul>Question 3:
+        <li> Answer 3</li> 
+        <li> __________________________________________________________________________________________________________________</li>                  
+        </ul>
+                    
+        <ul> Question 4:
+        <li> Answer 4</li>
+        <li> __________________________________________________________________________________________________________________</li>
+        </ul>
+        </div>
+    </details>
+      </section4>
+
+
+    
+    <section5> 
+            <details> 
+                <summary> <div class="contacts"> Campus Contacts </div> </summary>
+            <ul>
+                <li>Hot Line: 662-412</li>
+                <li>Mt. Hope Sub-campus (6:00am to 10:00pm): 645-3232, Exts. 4750, 5240</li>
+                <li>University Field Station Security: 662-2750, Exts. 35, 40</li>
+                <li>Trinidad and Tobago Police Service: 999</li>
+                <li>Health Service Unit: 662-2002, Exts. 82149, 82152, 82153</li>
+                <li>Charge Room: 662-2002, Exts. 82120, 83510, 84319</li>
+                <li>Command Centre: 662-2002, Exts. 82736, 82737; 645-7514</li>
+                <li>Student Administration Building: 662-2002, Exts. 84123, 84281</li>
+            </ul>
+            </details>
+        </section5>
+        
+
+<footer>
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/01/Coat_of_arms_of_the_University_of_the_West_Indies.png" width="100" height="100">
+</footer>
+        
 {% endblock %}

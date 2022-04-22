@@ -1,0 +1,98 @@
+.nav-wrapper a{
+    color:  #00cccc;
+    font-family: "Libre-Baskerville";
+    }
+    
+    .title{
+        color:#00cccc;
+    }
+    
+   
+    .imagecontainer{
+        text-align: left;
+        margin-right: 3px;
+        width: 100%;
+        margin-top: 3px;
+    }
+    
+     .gallery{
+       margin: 26px;
+        border: 3px hidden;
+        float: center;
+        width: 260px;
+        padding: 30px;
+    
+        }
+      
+     .gallery img {
+        width: 100%;
+        height: 150px;
+    
+        }
+
+        .desc1 {
+            color:rgba(209, 71, 29, 0.76);
+            padding: 5px 5px;
+            text-align: left;
+            text-decoration: none;
+            font-size: 35px;
+            font-family: "Brush Script MT";
+        }
+
+        .desc2 {
+            color:rgba(209, 71, 29, 0.76);
+            padding: 10px 20px;
+            text-align: left;
+            text-decoration: none;
+            font-size: 35px;
+            font-family: "Brush Script MT";
+        }
+
+        .desc3 {
+            color:rgba(209, 71, 29, 0.76);
+            padding: 13px 20px;
+            text-align: left;
+            text-decoration: none;
+            font-size: 35px;
+            font-family: "Brush Script MT";
+        }
+
+        .desc4 {
+            color:rgba(56, 29, 209, 0.76);
+            padding: 20px 10px;
+            text-align: left;
+            text-decoration: none;
+            font-size: 20px;
+            font-family: "Helvetica";
+            position: relative;
+        }
+
+        .desc5{
+          padding: 10px 10px;
+        }
+       
+        .desc6{
+          padding: 10px 10px;
+        }
+
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+          }
+          
+         
+          .row::after {
+            content: "";
+            clear: both;
+            display: table;
+          }
+     
+        .row {
+            display: flex;
+          }
+          
+          .column {
+            flex: 33.33%;
+            padding: 5px;
+          }
