@@ -1,19 +1,22 @@
 import os
 from flask import Flask
 from flask_login import LoginManager, current_user
+
+
+
+
 from flask_uploads import DOCUMENTS, IMAGES, TEXT, UploadSet, configure_uploads
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
 from werkzeug.datastructures import FileStorage
 from datetime import timedelta
-
-
 from App.database import create_db, get_migrate
-
+from App.models.user import User
 from App.controllers import (
+    
     setup_jwt
 )
-
+login_manager = LoginManager()
 from App.views import (
     user_views,
     api_views
@@ -63,5 +66,12 @@ def create_app(config={}):
     return app
 
 
+
 app = create_app()
+login_manager.init_app(app)
 migrate = get_migrate(app)
+
+
+@login_manager.user_loader
+def load_user(user_id):
+	return User.query.filter_by(id=user_id).one_or_none()

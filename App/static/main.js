@@ -15,6 +15,18 @@ function loadTable(users){
         </tr>`;
     }
 }
+f
+function notifTable(reports){
+    const table = document.querySelector('#result');
+    for(let report of reports){
+        table.innerHTML += `<tr>
+            <td>${report.type}</td>
+            <td>${report.location}</td>
+            <td>${report.date}</td>
+            <td>${report.details}</td>
+        </tr>`;
+    }
+}
 
 async function main(){
     const users = await getUserData();

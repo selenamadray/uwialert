@@ -1,10 +1,9 @@
 from App.database import db
 
-
 class Listing(db.Model):
     listingId = db.Column(db.Integer, primary_key=True)
     userId = db.Column(db.Integer, db.ForeignKey('user.id'))
-    reportId = db.Column(db.Integer, db.ForeignKey('report.studentid'))
+    reportId = db.Column(db.Integer, db.ForeignKey('report.reportId'))
 
 def __init__(self, userId, reportId):
         self.userId = userId

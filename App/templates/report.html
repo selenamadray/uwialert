@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block title %}Sign Up{% endblock %}
+{% block page %}Sign Up{% endblock %}
+
+{{ super() }}
+
+{% block content %}
+ <div class="row">
+      <div class="row">
+        <form id="myForm" class="col s12 m8 offset-m2" method="POST" action="/report">
+            {{ form.csrf_token }}
+
+            <div class="input-field col s12 m8 offset-m2"> 
+              {{ form.name(size=20, class="validate") }}
+              {{ form.name.label }}
+            </div>
+
+            <div class="input-field col s12 m8 offset-m2">
+              {{ form.type(size=50, class="validate") }}
+              {{ form.type.label }}
+            </div>
+
+            <div class="input-field col s12 m8 offset-m2">
+              {{ form.location(size=50, class="validate") }}
+              {{ form.location.label }}
+            </div>
+
+            <div class="input-field col s12 m8 offset-m2">
+                {{ form.date(size=10, class="validate") }}
+                {{ form.date.label }}
+            </div>
+
+            <div class="input-field col s12 m8 offset-m2">
+                {{ form.details(size=200, class="validate") }}
+                {{ form.details.label }}
+            </div>
+
+            <div class="input-field col s12 m8 offset-m2">
+              {{form.submit}}
+            </div> 
+        </form>
+      </div>
+  </div>
+{% endblock %}

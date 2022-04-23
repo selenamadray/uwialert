@@ -6,22 +6,19 @@
 
 {% block content %}
     <div class="row">
-        <p>
-            This is table is renderd on the Server. Flask gets the data from the database and uses jinja templates to dyanmically render this page when a request is sent to <a href="/usrs">/users</a>.
-        </p>
-    </div>
-    <div class="row">
       <table>
         <thead>
           <tr>
-            <th>Id</th><th>Username</th>
+            <th>Type</th><th>Location</th><th>Date</th><th>Details</th>
           </tr>
         </thead>
         <tbody>
           {% for report in reports %}
             <tr>
-                <td>{{report.location}}</td>
-                <td>{{user.type}}</td>
+              <td>{{report.type}}</td>
+              <td>{{report.location}}</td>
+              <td>{{report.date}}</td>
+              <td>{{report.details}}</td>
             </tr>
           {% endfor %}
         <tbody>
