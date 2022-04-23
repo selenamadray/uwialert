@@ -22,9 +22,9 @@ class LogInForm(FlaskForm):
 
 class ReportForm(FlaskForm):
     name = StringField('Name', validators=[InputRequired()])
-    type = StringField('Type', validators=[InputRequired()])
-    location = StringField('Location', validators=[InputRequired()])
-    date = StringField('Date of Incident', validators=[InputRequired()])
-    details = StringField('Details', validators=[InputRequired()])
+    type = StringField('What type of incident are you reporting?', validators=[InputRequired()])
+    location = StringField('Where did this incident occur?', validators=[InputRequired()])
+    date = StringField('Please give the date of the incident.', validators=[InputRequired()])
+    details = StringField('Please give a brief description of any important details.', validators=[InputRequired()])
     submit = SubmitField('Make Report', render_kw={
                          'class': 'btn waves-effect waves-light white-text'})
