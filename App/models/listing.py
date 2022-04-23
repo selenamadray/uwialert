@@ -14,5 +14,7 @@ def __repr__(self):
 
 def toDict(self):
     return{
-         'type': self.report.type,
+         'listingID': self.listingId,
+         'userId': self.userId,
+         'reportId':self.reportId,
     }

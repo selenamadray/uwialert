@@ -3,9 +3,24 @@
   margin-left: auto;
   margin-right: auto;
   flex-direction: column;
-  width: 100vw;
-  color: black;
+  width: 48vw;
+  color: rgb(12, 12, 12);
   text-align: center;
+  font-family: "Garamond" ;
+  font-size: 20px;
+}
+
+
+.nav-wrapper {
+  background-color: #66a3c1;
+}
+
+.h2{
+  padding-top: 10px;
+}
+
+.h3{
+  padding-bottom: 10px;
 }
 
 .columnWrapper {
@@ -15,28 +30,109 @@
   margin-right: auto;
   width: 100vw;
   gap: 10px;
-  justify-content: center;
+  justify-content: left;
   flex-wrap: wrap;
 }
+
+.Categories{
+  font-family: "Papyrus" ;
+}
+
+.imagecontainer{
+  text-align: left;
+  margin-left: 3px;
+  width: 100%;
+  margin-top: 3px;
+}
+
+
+.gallery{
+    margin: 26px;
+     border: 3px hidden;
+     float: center;
+     width: 260px;
+     padding: 30px;
+ 
+     }
+   
+.gallery img {
+     width: 100%;
+     height: 150px;
+     position: relative;
+ 
+     }
 
 .desc {
   text-align: center;
 }
+
+.desc1 {
+  color:rgba(209, 71, 29, 0.76);
+  padding: 5px 5px;
+  text-align: left;
+  text-decoration: none;
+  font-size: 35px;
+  font-family: "Brush Script MT";
+}
+
+.desc2 {
+  color:rgba(209, 71, 29, 0.76);
+  padding: 5px 5px;
+  text-align: left;
+  text-decoration: none;
+  font-size: 35px;
+  font-family: "Brush Script MT";
+}
+
+.desc3 {
+  color:rgba(209, 71, 29, 0.76);
+  padding: 5px 5px;
+  text-align: left;
+  text-decoration: none;
+  font-size: 35px;
+  font-family: "Brush Script MT";
+}
+
+.desc4 {
+  color:rgba(209, 71, 29, 0.76);
+  font-family: "Brush Script MT";
+  text-align: center;
+  font-size: 35px;
+  padding: 20px 10px;
+  text-align: left;
+  text-decoration: none;
+  font-size: 33px;
+  position: relative;
+}
+
+.desc6{
+  font-family: "Times New Roman";
+  font-size: 18px;
+}
+
+.contacts{
+color:rgba(209, 71, 29, 0.76);
+padding: 10px 10px;
+text-align: center;
+font-size: 35px;
+font-family: "Brush Script MT";
+}
+
 
 @media (max-width: 1024px) {
   .columnWrapper {
     display: flex;
     text-align: center;
     flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
+    position: right;
     width: 100vw;
     gap: 10px;
     justify-content: center;
+
   }
   .image {
     width: 50vw;
-    border: 1px solid black;
+    border: 1px solid rgb(12, 12, 12);
     border-radius: 5px;
   }
   li {
@@ -63,17 +159,4 @@
     color: white;
     background-color: black;
   }
-  .body {
-    background-image: url('https://media.giphy.com/media/MyWrJJIdAfoJuEPlLP/giphy.gif');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-.footer{
-  background-color: black;
-  color: #00cccc;
-  text-align: center;
-}
-
 }

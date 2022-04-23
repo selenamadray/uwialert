@@ -89,6 +89,11 @@ def get_reports_page():
     reports = get_all_reports()
     return render_template('notifs.html', reports=reports)
 
+#@user_views.route('/map', methods=['GET'])
+#def get_all_map():
+  #  location = getMap()
+   # return render_template('map.html', location=location)
+
 
 @user_views.route('/api/users')
 def client_app():
@@ -100,6 +105,9 @@ def client_app():
 def lol():
     return 'lol'
 
+@user_views.route('/map')
+def map_page():
+    return render_template('map.html')
 
 @user_views.route('/static/users')
 def static_user_page():
